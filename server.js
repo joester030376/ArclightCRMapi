@@ -4,8 +4,7 @@ var app = express();
 
 var dbConnect = mysql.createConnection({
     host: 'localhost',
-    user: 'root',
-    password: 'J1A.uj95a]z*//.n',  
+    user: 'root',    
     database: 'arclight'
 });
 
@@ -16,8 +15,6 @@ dbConnect.connect(function(err) {
         console.log("Connected to the database");
     }    
 });
-
-
 
 app.listen(8080, function(err) {
     if(err) console.log("Did not connect to server");
