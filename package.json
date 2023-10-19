@@ -8,5 +8,8 @@
     "start": "node server.js"
   },
   "author": "Joseph Varner",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node": "^21.0.0"
+  }
 }
