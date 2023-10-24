@@ -16,6 +16,22 @@ dbConnect.connect(function(err) {
     }    
 });
 
+app.get('/clients', function(err) {
+    if (err) throw err;
+
+    var sql = 'SELECT * FROM clients';
+    dbConnect.query(sql, function(err, result) {
+        if (err) throw err;
+        console.log(result);
+    });
+});
+
+
+
+
+
+
+
 app.listen(8080, function(err) {
     if(err) console.log("Did not connect to server");
     console.log("Started application on port 8080");
