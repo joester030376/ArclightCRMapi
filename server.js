@@ -16,15 +16,14 @@ dbConnect.connect(function(err) {
     }    
 });
 
-app.get('/clients', function(err) {
-    if (err) throw err;
-
-    var sql = 'SELECT * FROM clients';
-    dbConnect.query(sql, function(err, result) {
+app.get('/clients', (req, res) => {
+    
+    var sqlStatement = 'SELECT * FROM clients';
+    dbConnect.query(sqlStatement, (err, result) => {
         if (err) throw err;
-        console.log(result);
+        console.log(JSON.stringify(result));
     });
-});
+})
 
 
 
